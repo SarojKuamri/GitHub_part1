@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MyEmployeeInfo.Models.EmployeeModel>
+@{ 
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@Html.ActionLink("CreateEmployee", "CreateEmployee")
+
+
+<table>
+    <thead><tr><th>EmployeeId</th><th>EmployeeName</th><th>EmployeeType</th><th>EmployeeCode</th><th>EmployeePosition</th><th>OfficeLocation</th><th>Edit</th><th>Delete</th></tr></thead>
+    @foreach (var Item in Model)
+    {
+        <tbody>
+            <tr>
+                <td>@Item.EmployeeId</td>
+                <td>@Item.EmployeeName</td>
+                <td>@Item.EmployeeType</td>
+                <td>@Item.EmployeeCode</td>
+                <td>@Item.EmployeePosition</td>
+                <td>@Item.OfficeLocation</td>
+                <td>@Html.ActionLink("Edit", "EditEmployee", new { id = Item.EmployeeId })</td>
+                <td>@Html.ActionLink("Delete", "DeleteEmployee", new { id = Item.EmployeeId })</td>
+            </tr>
+        </tbody>
+
+    }
+</table>

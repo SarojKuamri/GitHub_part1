@@ -1,0 +1,17 @@
+Microsoft Windows [Version 10.0.18363.1379]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\Administrator>Mofcomp.exe ClusMI.mof
+Microsoft (R) MOF Compiler Version 10.0.18362.1
+Copyright (c) Microsoft Corp. 1997-2006. All rights reserved.
+File 'ClusMI.mof' not found!
+
+C:\Users\Administrator>Winmgmt /resetrepository
+WMI repository has been reset
+
+C:\Users\Administrator>Mofcomp.exe ClusMI.mof
+Microsoft (R) MOF Compiler Version 10.0.18362.1
+Copyright (c) Microsoft Corp. 1997-2006. All rights reserved.
+File 'ClusMI.mof' not found!
+
+C:\Users\Administrator>

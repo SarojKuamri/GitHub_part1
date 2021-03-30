@@ -1,0 +1,31 @@
+﻿@model IEnumerable<BookMyShow.Models.TheatreModel>
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Index</h1>
+<h1>Theatre List</h1>
+<hr />
+@Html.ActionLink("Create Theatre", "CreateTheatre")
+<table align="center" class="table table-bordered table-sm table-striped">
+    <thead>
+        <tr><th>Id</th><th>Name</th><th>Location</th><th>Update</th><th>Delete</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.TheatreId</td>
+                <td>@item.ThreatreName</td>
+                <td>@item.ThreatreLoccation</td>
+                <td>@Html.ActionLink("Edit", "EditTheatre", new { Id = item.TheatreId })</td>
+                <td>@Html.ActionLink("Delete", "DeleteTheatre", new { Id = item.TheatreId })</td>
+            </tr>
+
+
+        }
+    </tbody>
+</table>
+
+
+
+

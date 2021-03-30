@@ -1,0 +1,36 @@
+﻿@model BookMyShow.Models.TheaterModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DeleteTheater</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    @Html.TextBoxFor(TheaterId => TheaterId)
+                </div>
+                <div class="form-group">
+                    @Html.DisplayNameFor(TheaterName => TheaterName.ThreaterName)
+                    @Html.TextBoxFor(TheaterName => TheaterName.ThreaterName)
+                </div>
+                <div class="form-group">
+                    @Html.DisplayNameFor(TheaterLoc => TheaterLoc.ThreaterLoc)
+                    @Html.TextBoxFor(TheaterLoc => TheaterLoc.ThreaterLoc)
+                </div>
+
+                <input type="submit" value="Delete Theater" />
+
+            </div>
+        </div>
+    }
+</body>
+</html>

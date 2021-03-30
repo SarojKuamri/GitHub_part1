@@ -1,0 +1,53 @@
+﻿@model BookMyShow.Models.TheatreModel
+@{
+    ViewData["Title"] = "CreateTheatre";
+}
+
+<h1>CreateTheatre</h1>
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateTheater</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <div class="row" style=" text-align:center">
+            <div class="col-12">
+
+                <div class="form-group">
+                    <label for="TheaterName">
+                        @Html.DisplayNameFor(TheaterObj => TheaterObj.ThreatreName)
+                    </label>
+                    @Html.TextBoxFor(TheaterObj => TheaterObj.ThreatreName)
+                </div>
+                <div class="form-group">
+                    <label for="TheaterLocation">
+                        @Html.DisplayNameFor(TheaterObj => TheaterObj.ThreatreLoccation)
+                    </label>
+                    @Html.TextBoxFor(TheaterObj => TheaterObj.ThreatreLoccation)
+                </div>
+                <input type="submit" value="Save Theater" class="btn btn-primary" />
+                <input type="button" value="Reset" Onclick="reset()" class="btn btn-secondary" />
+
+            </div>
+        </div>
+
+    }
+</body>
+</html>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@section scripts{
+    <script>
+        function reset() {
+            $('#ThreatreName').val();
+            $('#ThreatreLoc').val();
+        }
+    </script>
+}
+
+

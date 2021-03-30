@@ -1,0 +1,63 @@
+﻿@model MyBookStore.Models.MovieModel
+@{
+    ViewData["Title"] = "CreateMovie";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create Movie</h1>
+<hr />
+<div class="row">
+    @using (Html.BeginForm())
+    {
+    <div class="col-12">
+        <div class="form-group">
+            <label for="MovieId">
+                @Html.DisplayNameFor(Movieobj => Movieobj.MovieID)
+            </label>
+            @Html.TextBoxFor(Movieobj => Movieobj.MovieID)
+        </div>
+        <div class="form-group">
+            <label for="MovieName">
+                @Html.DisplayNameFor(Movieobj => Movieobj.MovieName)
+            </label>
+            @Html.TextBoxFor(Movieobj => Movieobj.MovieName)
+        </div>
+        <div class="form-group">
+            <label for="Language">
+                @Html.DisplayNameFor(Movieobj => Movieobj.MovieLanguage)
+            </label>
+            @Html.TextBoxFor(Movieobj => Movieobj.MovieLanguage)
+        </div>
+        <div class="form-group">
+            <label for="MoviePrice">
+                @Html.DisplayNameFor(Movieobj => Movieobj.MoviePrice)
+            </label>
+            @Html.TextBoxFor(Movieobj => Movieobj.MoviePrice)
+        </div>
+        <div class="form-group">
+            <label for="MovieDescription">
+                @Html.DisplayNameFor(Movieobj => Movieobj.MovieDescription)
+            </label>
+            @Html.TextBoxFor(Movieobj => Movieobj.MovieDescription)
+        </div>
+        <div class="form-group">
+            <label for="MovieType">
+                @Html.DisplayNameFor(Movieobj => Movieobj.MovieType)
+            </label>
+            @Html.TextBoxFor(Movieobj => Movieobj.MovieType)
+        </div>
+
+        <div class="form-group">
+            <label for="MovieLocation">
+                @Html.DisplayNameFor(Movieobj => Movieobj.MovieLocation)
+            </label>
+            @Html.TextBoxFor(Movieobj => Movieobj.MovieLocation)
+        </div>
+        <input type="submit" value="Save Movie" />
+        <input type="submit" value="Reset" />
+        @*// <input type="button" value="cancel" asp-controller="Location" asp-action="ResetLocation" />*@
+    </div>
+    }
+</div>
+
+

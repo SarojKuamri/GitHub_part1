@@ -1,0 +1,60 @@
+﻿@model MyBookStore.Models.MovieModel
+@{
+    ViewData["Title"] = "EditMovie";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>EditMovie</h1>
+<div class="row">
+    @using (Html.BeginForm())
+    {
+    <div class="col-12">
+        <div class="form-group">
+            <label for="MovieId">
+                @Html.DisplayNameFor(movieobj => movieobj.MovieID)
+            </label>
+            @Html.EditorFor(movieobj => movieobj.MovieID)
+        </div>
+        <div class="form-group">
+            <label for="MovieName">
+                @Html.DisplayNameFor(movieobj => movieobj.MovieName)
+            </label>
+            @Html.TextBoxFor(movieobj => movieobj.MovieName)
+        </div>
+        <div class="form-group">
+            <label for="MovieLanguage">
+                @Html.DisplayNameFor(movieobj => movieobj.MovieLanguage)
+            </label>
+            @Html.EditorFor(movieobj => movieobj.MovieLanguage)
+        </div>
+        <div class="form-group">
+            <label for="MoviePrice">
+                @Html.DisplayNameFor(movieobj => movieobj.MoviePrice)
+            </label>
+            @Html.EditorFor(movieobj => movieobj.MoviePrice)
+        </div>
+        <div class="form-group">
+            <label for="MovieDescription">
+                @Html.DisplayNameFor(movieobj => movieobj.MovieDescription)
+            </label>
+            @Html.EditorFor(movieobj => movieobj.MovieDescription)
+        </div>
+        <div class="form-group">
+            <label for="MovieType">
+                @Html.DisplayNameFor(movieobj => movieobj.MovieType)
+            </label>
+            @Html.EditorFor(movieobj => movieobj.MovieType)
+        </div>
+        <div class="form-group">
+            <label for="MovieLocation">
+                @Html.DisplayNameFor(movieobj => movieobj.MovieLocation)
+            </label>
+            @Html.EditorFor(movieobj => movieobj.MovieLocation)
+        </div>
+        <input type="submit" value="Edit Movie" />
+        <input type="submit" value="Reset" />
+    </div>
+    }
+</div>
+
+

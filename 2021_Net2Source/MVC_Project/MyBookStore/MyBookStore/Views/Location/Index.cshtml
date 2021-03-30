@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MyBookStore.Models.LocationModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Location List</h1>
+<hr />
+@Html.ActionLink("Create Location","CreateLocation")
+<table>
+    <thead>
+        <tr>
+            <th>Location Id</th>
+            <th>Location</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+
+    </thead>
+   
+    <tbody>
+        @foreach (var item in Model)
+        { 
+        <tr>
+            <td>@Html.DisplayFor(obj => item.LocationID)</td>
+            <td>@Html.DisplayFor(obj => item.Location)</td>
+            <td>@Html.ActionLink("Edit","EditLocation",new { id=item.LocationID})</td>
+            <td>@Html.ActionLink("Delete", "DeleteLocation", new { id = item.LocationID})</td>
+         
+        </tr>
+        }
+
+    </tbody>
+
+</table>
+

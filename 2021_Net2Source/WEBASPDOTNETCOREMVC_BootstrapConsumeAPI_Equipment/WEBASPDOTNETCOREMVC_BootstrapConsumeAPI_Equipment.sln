@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEBASPDOTNETCOREMVC_BootstrapConsumeAPI_Equipment", "WEBASPDOTNETCOREMVC_BootstrapConsumeAPI_Equipment\WEBASPDOTNETCOREMVC_BootstrapConsumeAPI_Equipment.csproj", "{BAECACE1-F90F-4494-8916-7BE85127889F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAECACE1-F90F-4494-8916-7BE85127889F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAECACE1-F90F-4494-8916-7BE85127889F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAECACE1-F90F-4494-8916-7BE85127889F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAECACE1-F90F-4494-8916-7BE85127889F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A4467FF3-73A3-4145-8438-73ECE930114C}
+	EndGlobalSection
+EndGlobal

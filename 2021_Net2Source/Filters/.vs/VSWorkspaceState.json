@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\bin\\Debug",
+    "\\bin\\Debug\\netcoreapp2.0",
+    "\\Controllers",
+    "\\CustomFilters"
+  ],
+  "SelectedNode": "\\CustomFilters\\TimeElapsedAsync.cs",
+  "PreviewInSolutionExplorer": false
+}

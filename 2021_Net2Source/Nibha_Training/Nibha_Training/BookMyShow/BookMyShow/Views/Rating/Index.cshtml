@@ -1,0 +1,35 @@
+﻿@model IEnumerable<BookMyShow.Models.RatingModel>
+ @{
+        Layout = null;
+  }
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+        @Html.ActionLink("Create Rating","CreateRating")
+    </head>
+    <body>
+        <table align="center" class="table table-bordered table-sm table-striped">
+            <thead>
+                <tr><th>Id</th><th>MovieName</th><th>MoviePrice</th><th>MovieType</th><th>MovieRating</th><th>Update</th><th>Delete</th></tr>
+            </thead>
+            <tbody>
+                @foreach (var product in Model)
+                {
+                    <tr>
+                        <td>@product.RatingId</td>
+                        <td>@product.MovieModel.MovieName</td>
+                        <td>@product.MovieModel.MoviePrice</td>
+                        <td>@product.MovieModel.MovieType</td>
+                        <td>@product.MovieRatings</td>
+                        <td>@Html.ActionLink("Edit", "EditRating", new { id = product.RatingId })</td>
+                        <td>@Html.ActionLink("Delete", "DeleteRating", new { id = product.RatingId })</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </body>
+    </html>

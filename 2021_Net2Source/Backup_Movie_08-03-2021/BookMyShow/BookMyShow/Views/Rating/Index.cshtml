@@ -1,0 +1,63 @@
+﻿@model IEnumerable<BookMyShow.Models.RatingModel>
+@{
+     ViewData["Title"] = "Index";
+}
+    <h1>Index</h1>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+        @Html.ActionLink("CreateRating", "CreateRating")
+    </head>
+    <body>
+        <table align="center" class="table table-bordered table-sm table-striped">
+            <thead>
+                <tr><th>Id</th><th>MovieName</th><th>MoviePrice</th><th>MovieType</th><th>MovieRating</th><th>Update</th><th>Delete</th></tr>
+            </thead>
+            <tbody>
+                @foreach (var product in Model)
+                {
+                    <tr>
+                        <td>@product.RatingId</td>
+                        <td>@product.MovieModel.MovieName</td>
+                        <td>@product.MovieModel.MoviePrice</td>
+                        <td>@product.MovieModel.MovieType</td>
+                        <td>@product.MovieRatings</td>
+                        <td>@Html.ActionLink("Edit", "EditRating", new { id = product.RatingId })</td>
+                        <td>@Html.ActionLink("Delete", "DeleteRating", new { id = product.RatingId })</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </body>
+    </html>
+
+
+
+
+
+@*@model IEnumerable<BookMyShow.Models.RatingModel>
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Index</h1>
+<div class="row">
+
+    <div class="col-12">
+        <table class="table table-bordered">
+            <thead><tr><th>Rating Id</th><th>Rating</th><th>Movie</th></tr></thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr><td>@item.RatingId</td><td>@item.MovieRatings</td><td>@item.MovieModel.MovieName</td></tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+
+</div>*@
+
+

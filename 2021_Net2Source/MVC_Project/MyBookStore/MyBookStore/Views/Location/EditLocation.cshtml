@@ -1,0 +1,30 @@
+﻿@model MyBookStore.Models.LocationModel
+@{
+    ViewData["Title"] = "EditLocation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>EditLocation</h1>
+<hr />
+<div class="row">
+    @using (Html.BeginForm())
+    {
+        <div class="col-12">
+            <div class="form-group">
+                <label for="LocationId">
+                    @Html.DisplayNameFor(locationobj => locationobj.LocationID)
+                </label>
+                @Html.EditorFor(locationobj => locationobj.LocationID)
+            </div>
+            <div class="form-group">
+                    <label for="LocationId">
+                        @Html.DisplayNameFor(locationobj => locationobj.Location)
+                    </label>
+                    @Html.TextBoxFor(locationobj => locationobj.Location)
+                </div>
+            <input type="submit" value="Save Location" />
+            <input type="submit" value="Reset" />
+        </div>
+    }
+</div>
+

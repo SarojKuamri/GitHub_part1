@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<h1>Equipment</h1>
+<h3>Add</h3>
+<form action="javascript:void(0);" method="post" onsubmit="addEquipment()">
+    <input type="text" id="EquipmentName" placeholder="EquipmentName" />
+    <input type="text" id="TotalAmount" placeholder="TotalAmount" />
+    <input type="text" id="PurchageDate" placeholder="PurchageDate" />
+    <input type="submit" value="Add" />
+    <input type="button" name="name" value="Button" onclick="myfunction" />
+</form>

@@ -1,0 +1,39 @@
+﻿@model BookMyShow.Models.MovieModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditMovie</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    @Html.TextBoxFor(MovieId => MovieId.MovieID)
+                </div>
+                <div class="form-group">
+                    @Html.DisplayNameFor(MovieName => MovieName.MovieName)
+                    @Html.TextBoxFor(MovieName => MovieName.MovieName)
+                </div>
+                <div class="form-group">
+                    @Html.DisplayNameFor(MovieType => MovieType.MovieType)
+                    @Html.TextBoxFor(MovieType => MovieType.MovieType)
+                </div>
+                <div class="form-group">
+                    @Html.DisplayNameFor(MoviePrice => MoviePrice.MoviePrice)
+                    @Html.TextBoxFor(MoviePrice => MoviePrice.MoviePrice)
+                </div>
+                <input type="submit" value="Save Movie" />
+
+            </div>
+        </div>
+    }
+</body>
+</html>

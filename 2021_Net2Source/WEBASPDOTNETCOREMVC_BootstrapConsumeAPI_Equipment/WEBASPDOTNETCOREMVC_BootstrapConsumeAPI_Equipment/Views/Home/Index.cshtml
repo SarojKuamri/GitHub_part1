@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    input[type='submit'], button, [aria-label] {
+        cursor: pointer;
+    }
+
+    #editForm {
+        display: none;
+    }
+
+    table {
+        font-family: Arial, sans-serif;
+        border: 1px solid;
+        border-collapse: collapse;
+    }
+
+    th {
+        background-color: #f8f8f8;
+        padding: 5px;
+    }
+
+    td {
+        border: 1px solid;
+        padding: 5px;
+    }
+</style>
+<h1>Equipment</h1>
+<h3>Add</h3>
+<form action="javascript:void(0);" method="POST" onsubmit="addEquipment()">
+    <input type="text" id="EquipmentName" placeholder="EquipmentName">
+    <input type="text" id="TotalAmount" placeholder="TotalAmount">
+    <input type="text" id="PurchageDate" placeholder="PurchageDate">
+    <input type="submit" value="Add">
+    @*<input type="button" name="name" value="" onclick="myfuntion" />*@
+</form>
+
+
+<div id="editForm">
+    <h3>Edit</h3>
+    <form action="javascript:void(0);" onsubmit="updateItem()">
+        <input type="hidden" id="editEquipmentID">
+        <input type="text" id="editEquipmentName" placeholder="EquipmentName">
+        <input type="text" id="editTotalAmount" placeholder="TotalAmount">
+        <input type="text" id="editPurchageDate" placeholder="PurchageDate">
+        <input type="submit" value="Save">
+        <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+    </form>
+</div>
+
+<p id="counter"></p>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Equipment ID</th>
+            <th>Equipment Name</th>
+            <th>Total Amount</th>
+            <th>Purchage Date</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody id="Equipmentlist"></tbody>
+</table>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script type="text/javascript">
+    //getEquiptment();
+    GetEquipment();
+</script>

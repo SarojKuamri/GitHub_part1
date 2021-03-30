@@ -1,0 +1,42 @@
+﻿@model IEnumerable<BookMyShow.Models.MovieModel>
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Movie List</h1>
+<hr />
+@Html.ActionLink("Add Movie", "CreateMovie")
+<table>
+    <thead>
+        <tr>
+            <th>Movie Id</th>
+            <th>Movie Name</th>
+            <th>Movie Type</th>
+            <th>Movie Description</th>
+            <th>Movie Price</th>
+            <th>Movie Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(obj => item.MovieID)</td>
+                <td>@Html.DisplayFor(obj => item.MovieName)</td>
+                <td>@Html.DisplayFor(obj => item.MovieLanguage)</td>
+                <td>@Html.DisplayFor(obj => item.MovieType)</td>
+                <td>@Html.DisplayFor(obj => item.MovieDescription)</td>
+                <td>@Html.DisplayFor(obj => item.MoviePrice)</td>
+                <td>@Html.DisplayFor(obj => item.MovieLocation)</td>
+                <td>@Html.ActionLink("Edit", "EditMovie", new { id = item.MovieID })</td>
+                <td>@Html.ActionLink("Delete", "DeleteMovie", new { id = item.MovieID })</td>
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+
+
+
+

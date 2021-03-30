@@ -1,0 +1,33 @@
+﻿@model BookMyShow.Models.LocationModel 
+@{
+    Layout = null;
+    ViewData["Title"] = "CreateLocation";
+
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateLocation</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+    <div class="row">
+        <div class="col-12">
+            
+            <div class="form-group">
+                <label for="Location">
+                    @Html.DisplayNameFor(locationObj => locationObj.Location)
+                </label>
+                @Html.TextBoxFor(locationObj => locationObj.Location)
+            </div>
+            <input type="submit" value="Save Location" class="btn btn-primary" />
+            <input type="submit" value="Reset" class=" active" />
+
+        </div>
+    </div>
+    }
+</body>
+</html>

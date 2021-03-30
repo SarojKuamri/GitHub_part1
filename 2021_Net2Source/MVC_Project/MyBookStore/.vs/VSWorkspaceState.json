@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\MyBookStore",
+    "\\MyBookStore\\Controllers",
+    "\\MyBookStore\\Models",
+    "\\MyBookStore\\Views",
+    "\\MyBookStore\\Views\\Book",
+    "\\MyBookStore\\Views\\Home",
+    "\\MyBookStore\\Views\\Location",
+    "\\MyBookStore\\Views\\Movie"
+  ],
+  "SelectedNode": "\\MyBookStore\\Controllers\\SeatController.cs",
+  "PreviewInSolutionExplorer": false
+}

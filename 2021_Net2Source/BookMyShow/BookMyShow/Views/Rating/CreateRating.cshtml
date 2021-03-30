@@ -1,0 +1,33 @@
+﻿@model BookMyShow.Models.RatingModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateRating</title>
+  
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label asp-for="MovieRatings" class="control-label">Movie Ratings</label>
+                    <input type="text" asp-for="MovieRatings" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="MovieId" class="control-label">Movie Name</label>
+                    <select asp-for="MovieId" class="form-control" asp-items="@ViewData["MovieId"] as SelectList"></select>
+                </div>
+                <input type="submit" value="Save Rating" class="btn btn-primary" />
+                @Html.ActionLink("GotoBack", "Index")
+            </div>
+        </div>
+    }
+</body>
+</html>

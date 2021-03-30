@@ -1,0 +1,38 @@
+﻿@model BookMyShow.Models.TheatreModel
+@{
+    ViewData["Title"] = "EditTheatre";
+}
+
+<h1>EditTheatre</h1>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditTheater</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    @Html.TextBoxFor(TheatreId => TheatreId.TheatreId)
+                </div>
+                <div class="form-group">
+                    @Html.DisplayNameFor(TheatreName => TheatreName.ThreatreName)
+                    @Html.TextBoxFor(TheatreName => TheatreName.ThreatreName)
+                </div>
+                <div class="form-group">
+                    @Html.DisplayNameFor(TheatreLoc => TheatreLoc.ThreatreLoccation)
+                    @Html.TextBoxFor(TheatreLoc => TheatreLoc.ThreatreLoccation)
+                </div>
+
+                <input type="submit" value="Save Theatre" />
+
+            </div>
+        </div>
+    }
+</body>
+</html>

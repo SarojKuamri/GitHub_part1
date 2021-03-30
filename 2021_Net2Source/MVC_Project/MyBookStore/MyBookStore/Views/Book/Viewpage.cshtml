@@ -1,0 +1,47 @@
+﻿@model MyBookStore.Models.BookModel
+@{
+    ViewData["Title"] = "Viewpage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Viewpage</h1>
+<div>
+
+    <label>
+
+        @Html.DisplayFor(obj => obj.BookID)
+    </label>
+
+</div>
+<div>
+
+    <label>
+
+        @Html.DisplayFor(obj => obj.BookName)
+    </label>
+
+</div>
+
+
+<div>
+
+    <label>
+
+        @Html.DisplayFor(obj => obj.writer)
+    </label>
+
+</div>
+
+
+<div>
+
+    <label>
+
+        @Html.DisplayFor(obj => obj.Price)
+    </label>
+
+</div>
+
+
+
+

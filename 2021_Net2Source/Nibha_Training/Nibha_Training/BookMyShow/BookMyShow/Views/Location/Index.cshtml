@@ -1,0 +1,55 @@
+﻿@model IEnumerable<BookMyShow.Models.LocationModel>
+@{
+    Layout = null;
+    ViewData["Title"] = "";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    @Html.ActionLink("Create Location", "CreateLocation")
+</head>
+<body>
+    <table align="center" class="table table-bordered table-sm table-striped">
+        <thead>
+            <tr><th>Id</th><th>Name</th><th>Update</th><th>Delete</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+            <tr>
+                <td>@product.LocqationId</td>
+                <td>@product.Location</td>
+                <td>@Html.ActionLink("Edit", "EditLocation", new { LocId = product.LocqationId })</td>
+                <td>@Html.ActionLink("Delete", "DeleteLocation", new { LocId = product.LocqationId })</td>
+            </tr>
+
+                @*<div class="row">
+                    <div class="col-12">
+
+                        <div class="form-group">
+                            <label for="Location">
+                                @Html.DisplayNameFor(locationObj => product.LocqationId)
+                            </label>
+                            @Html.DisplayFor(locationObj => product.LocqationId)
+                        </div>
+                        <div class="form-group">
+                            <label for="Location">
+                                @Html.DisplayNameFor(locationObj => product.Location)
+                            </label>
+                            @Html.DisplayFor(locationObj => product.Location)
+                        </div>
+                        @Html.ActionLink("Edit", "EditLocation")
+                        @Html.ActionLink("Update", "UpdateLocation")
+                        @Html.ActionLink("Delete", "DeleteLocation")
+
+                    </div>
+                </div>*@
+            }
+        </tbody>
+            </table>
+</body>
+</html>

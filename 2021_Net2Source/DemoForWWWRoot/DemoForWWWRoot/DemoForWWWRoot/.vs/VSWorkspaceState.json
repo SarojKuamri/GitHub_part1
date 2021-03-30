@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\controller",
+    "\\obj",
+    "\\Views",
+    "\\Views\\ExceptionFilterDemo",
+    "\\Views\\ResultFilterDemo"
+  ],
+  "SelectedNode": "\\controller\\AuthorizeFilterDemoController.cs",
+  "PreviewInSolutionExplorer": false
+}
